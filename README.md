@@ -7,7 +7,9 @@ An accessible, detailed mathematical exposition of Levent Alpöge's announced pr
 
 ## Publication record
 
-[Zenodo manuscript record](https://zenodo.org/records/24433694) · v1.1-review
+[Zenodo manuscript record](https://zenodo.org/records/24433694) · **DOI:** [10.5281/zenodo.24433694](https://doi.org/10.5281/zenodo.24433694) · v1.1-review
+
+[Read on the SIGMA website](https://sigma-research.duckdns.org/papers/unpacking-alpoge)
 
 ## Read and download
 
