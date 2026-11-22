@@ -1,0 +1,35 @@
+% Extracted from DESIGN_PROTOTYPES/FIG03_theta_space_families_book.tex
+% Requires TikZ and arrows.meta.
+\begin{tikzpicture}[>=Latex,font=\small,
+ bx/.style={draw=black!65,fill=black!2,rounded corners=1pt,minimum width=41mm,minimum height=7mm,align=center,inner sep=1.7pt},
+ sub/.style={draw=black!40,fill=black!4,rounded corners=1pt,minimum width=41mm,minimum height=7mm,align=center,inner sep=1.7pt},
+ ar/.style={-{Latex[length=1.8mm]},line width=.7pt},
+ lab/.style={font=\scriptsize}]
+% stage cards: start at x=0 and x=5.15 cm; rows y=0 and -5.8
+\foreach \cx/\cy/\tag in {0/0/0,5.2/0/1,0/-5.75/{m-1},5.2/-5.75/m}{
+\draw[black!20,rounded corners=2pt] (\cx-2.42,\cy+1.02) rectangle (\cx+2.42,\cy-4.43);
+\node[font=\small\bfseries] at (\cx,\cy+.57) {Stage $j=\tag$};
+}
+\node[bx] (x0) at (0,0) {$X_0:\ k$};
+\node[bx] (y0) at (0,-1.54) {$Y_0:\ r$};
+\draw[ar] (x0.south)--node[right,lab] {isometry}(y0.north);
+\node[sub] at (0,-2.65) {$W_0$: no signature asserted};
+\node[sub] at (0,-3.68) {$V_0$: no rank asserted};
+\node[bx] (x1) at (5.2,0) {$X_1:\ k+t+1$};
+\node[bx] (y1) at (5.2,-1.54) {$Y_1:\ r+t$};
+\draw[ar] (x1.south)--node[right,lab] {isometry}(y1.north);
+\node[sub] at (5.2,-2.65) {$W_1:\ (k,m-1)$};
+\node[sub] at (5.2,-3.68) {$V_j$: rank $r+t$; definite};
+\node[bx] (xp) at (0,-5.75) {$X_{m-1}:\ k+(m-1)(t+1)$};
+\node[bx] (yp) at (0,-7.29) {$Y_{m-1}:\ r+(m-1)t$};
+\draw[ar] (xp.south)--node[right,lab] {isometry}(yp.north);
+\node[sub] at (0,-8.4) {$W_{m-1}:\ (k+m-2,1)$};
+\node[sub] at (0,-9.43) {$V_j$: rank $r+t$; definite};
+\node[bx] (xm) at (5.2,-5.75) {$X_m:\ k+m(t+1)$};
+\node[bx] (ym) at (5.2,-7.29) {$Y_m:\ r+mt$};
+\draw[ar] (ym.north)--node[right,lab] {codim. 1}(xm.south);
+\node[sub] at (5.2,-8.4) {$W_m:\ (r,0)$ definite};
+\node[sub] at (5.2,-9.43) {$V_j$: rank $r+t$; definite};
+\node[font=\scriptsize,anchor=west] at (-2.4,-10.58) {$r=k+m-1$. Ranks are over $E$; signatures shown only for $W_j$.};
+\node[font=\scriptsize,anchor=west] at (-2.4,-10.97) {Solid arrows are within-stage isometric embeddings, not theta operators.};
+\end{tikzpicture}

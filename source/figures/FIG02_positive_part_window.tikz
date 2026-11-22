@@ -1,0 +1,22 @@
+% A schematic real function and its positive part; no mathematical data implied.
+\begin{tikzpicture}[x=.93cm,y=.76cm,>=Latex,every node/.style={font=\footnotesize}]
+\fill[blue!4] (3.35,.52) rectangle (9.35,5.8);
+\draw[dashed,blue!45] (3.35,.52)--(3.35,5.8) (9.35,.52)--(9.35,5.8);
+\node[anchor=west,font=\scriptsize] at (3.35,6.03) {$U$};
+\node[anchor=east,font=\scriptsize] at (9.35,6.03) {$(1+\delta)U$};
+\draw[->,black!70] (.5,4.35)--(11.8,4.35) node[right] {$u$};
+\node[anchor=east] at (.4,5.42) {$h(u)$};
+% Fill exactly the positive part of a smooth schematic h using top-half clip.
+\begin{scope}
+  \clip (.6,4.36) rectangle (11.6,5.82);
+  \fill[accent!19] (.6,4.35) -- plot[domain=.6:11.5,samples=220,smooth] (\x,{4.35+.85*sin(72*\x)+.18*cos(165*\x)}) -- (11.5,4.35)--cycle;
+\end{scope}
+\draw[very thick,black!64,smooth] plot[domain=.6:11.5,samples=250] (\x,{4.35+.85*sin(72*\x)+.18*cos(165*\x)});
+\node[font=\scriptsize,text=accent] at (8.3,5.62) {shaded: $h_+(u)$};
+% Below: separate positive kernel concentrated inside the chosen interval.
+\draw[->,black!65] (.5,1.02)--(11.8,1.02) node[right] {$u$};
+\node[anchor=east,align=right,font=\scriptsize] at (.4,2.27) {positive\\kernel};
+\fill[accent!11] (1.0,1.02) -- plot[domain=1.0:11.1,samples=160] (\x,{1.02+1.65*exp(-.63*(\x-6.45)*(\x-6.45))}) --(11.1,1.02)--cycle;
+\draw[very thick,accent,smooth] plot[domain=1.0:11.1,samples=160] (\x,{1.02+1.65*exp(-.63*(\x-6.45)*(\x-6.45))});
+\node[font=\scriptsize,text=accent] at (8.5,2.5) {$w_{k,\sigma}(u)$};
+\end{tikzpicture}

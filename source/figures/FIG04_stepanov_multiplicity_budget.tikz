@@ -1,0 +1,19 @@
+% A concrete naive Stepanov budget: F_5, m=3, degree 15.
+\begin{tikzpicture}[x=.96cm,y=.84cm,>=Latex,every node/.style={font=\footnotesize}]
+\node[anchor=west,font=\footnotesize\bfseries] at (.25,4.65) {The naive construction over $\F_5$};
+\node[anchor=west,text=black!65] at (.25,4.10) {$P_3(X)=(X^5-X)^3$};
+\draw[gray!65] (.75,1.28)--(10.2,1.28);
+\foreach \x/\a in {1.5/0,3.15/1,4.8/2,6.45/3,8.1/4} {
+  \foreach \j in {0,1,2} {
+    \filldraw[fill=blue!13,draw=accent!70,line width=.5pt] (\x,{1.48+.54*\j}) rectangle ++(.77,.54);
+  }
+  \node[below] at (\x+.385,1.26) {$\a$};
+}
+\node[anchor=west,align=left,text width=3.0cm] at (9.08,2.75) {Five roots, each of\\vanishing order three};
+\draw[->,accent] (9.10,2.28)--(8.9,2.28);
+\draw[decorate,decoration={brace,amplitude=4pt},black!65] (1.33,1.46)--(1.33,3.10);
+\node[anchor=east,font=\scriptsize,align=right] at (1.2,2.25) {$m=3$};
+\draw[gray!45] (.55,.50)--(12.25,.50);
+\node[anchor=west] at (.75,-.05) {Total vanishing order: $5\cdot3=15$};
+\node[anchor=west] at (6.25,-.05) {Polynomial degree: $\deg P_3=15$};
+\end{tikzpicture}
