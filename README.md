@@ -5,6 +5,10 @@ Brian Kramer, working with ChatGPT · **v1.1-review** · 21 November 2026
 
 An accessible, detailed mathematical exposition of Levent Alpöge's announced proof of the Riemann Hypothesis and its formalization in Lean. The manuscript traces the analytic reduction, auxiliary arithmetic constructions, and interfaces between them. It is intended for mathematical review, **not** as an independent certification of the proof.
 
+## Publication record
+
+[Zenodo manuscript record](https://zenodo.org/records/24433694) · v1.1-review
+
 ## Read and download
 
 - **[Read the manuscript (PDF)](paper/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.pdf)** — 137 pages.
