@@ -82,7 +82,7 @@
 \noindent\textbf{About the mathematical status.} In November 2026 Levent Alp\"oge announced a proof of the Riemann Hypothesis and its Dirichlet $L$-function generalization, developed with Claude and formalized in a very large Lean archive. Public independent checking has advanced substantially: Andrew Sutherland's MIT report of 21 November 2026 records compilation of all 175,187 modules, Lean kernel replay, acceptance by independently written kernels, and comparison of the five final statements with an independent challenge. Some long-running export and comparator checks remained pending at that update \parencite{Sutherland2026Verification}. This book did \emph{not} rerun those checks, nor does acceptance by a formal kernel certify the accuracy of every informal explanation given here. We distinguish short arguments proved in these pages, deep results cited from the formal source, and the interpretation that connects them. The remaining mathematical-review tasks are recorded in the appendices.
 
 \medskip
-\noindent\textit{Manuscript version:} \textbf{v\manuscriptversion}.\\
+\noindent\textit{Manuscript version:} \href{https://doi.org/10.5281/zenodo.24433694}{\textbf{v\manuscriptversion}}, with an additional example in Section~\ref{sec:imprimitive-euler}.\\
 \textit{Lean source revision:} \texttt{7cbf7a0c32fca1badf05931879a37c3f8a2b03b4}.\\
 \textit{Announcement:} \url{https://alpo.ge/remark.pdf}.\\
 \textit{Source mirror:} \url{https://github.com/CocoSgt/riemann-hypothesis-lean}.
@@ -301,7 +301,7 @@ In the critical strip the gamma and exponential factors in~\eqref{eq:completedL}
 
 The proof is conceptually the same as Theorem~\ref{thm:rh}, but the change $\chi\mapsto\chi^{-1}$ is indispensable. The Lean theorem \texttt{Formalism.VW.critLine} in \sourcefile{src/Formalism/GammaFactorNonvanishing/CritLine.lean}{CritLine.lean} implements precisely this argument. It checks the necessary gamma-factor nonvanishing and invokes the completed $L$-function functional equation.
 
-\section{Imprimitive characters and finite Euler factors}
+\section{Imprimitive characters and finite Euler factors}\label{sec:imprimitive-euler}
 Every Dirichlet character is induced from a primitive character whose conductor divides its modulus. Passing to a larger modulus introduces finitely many extra Euler factors. We check directly that these factors are nonzero for $\Rea(s)>0$, so that this change of modulus cannot create a zero in the critical strip.
 
 Let $\chi$ have conductor $f$ and let $\chi^*$ be the associated primitive character. Away from a finite set of primes dividing the larger modulus but not the conductor, the Euler products agree. Analytic continuation gives an identity of the form
@@ -310,6 +310,12 @@ L(s,\chi)=L(s,\chi^*)\prod_{p\in S}
 \bigl(1-\chi^*(p)p^{-s}\bigr).
 \end{equation}
 If $\chi$ is viewed modulo $q$, the finite set is $S=\{p:\ p\mid q,\ p\nmid f\}$. Primes dividing $f$ already have $\chi^*(p)=0$ and contribute no additional factor. The distinction between the modulus and the primitive conductor will matter again for auxiliary characters.
+
+Let $\xi$ be the even quartic character modulo $16$ with $\xi(5)=i$. For $q\in\{547,727\}$ and $0\le j<4$, induce the eight primitive characters underlying $(\cdot/q)\xi^j$ to modulus $16\cdot547\cdot727$. This multiplies the product of their $L$-functions by
+\[
+(1-2^{-2s})(1-547^{-4s})(1-727^{-2s})^2.
+\]
+The nonzero values are $\pm1$ at $2$, all four fourth roots at $547$ and two copies of each sign at $727$. Given the conductor degrees $2,4,4$, the respective trace pairs $(0,2)$, $(0,0)$ and $(0,4)$ determine the polynomials by conjugate pairing. Under Dirichlet GRH these first two power sums are recovered from corrected limiting extrema of the $547/727$ race at widths $p$ and $p^2$ \parencite{Crossley2026WidthCusp}.
 
 \begin{lemma}[Finite Euler factors are zero-free]\label{lem:euler}
 If $p$ is prime, $\Rea(s)>0$, and $|z|\le1$, then $1-zp^{-s}\ne0$.
