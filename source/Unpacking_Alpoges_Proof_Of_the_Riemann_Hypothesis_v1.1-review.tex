@@ -311,6 +311,12 @@ L(s,\chi)=L(s,\chi^*)\prod_{p\in S}
 \end{equation}
 If $\chi$ is viewed modulo $q$, the finite set is $S=\{p:\ p\mid q,\ p\nmid f\}$. Primes dividing $f$ already have $\chi^*(p)=0$ and contribute no additional factor. The distinction between the modulus and the primitive conductor will matter again for auxiliary characters.
 
+For a worked example, let $\xi$ be the even quartic character modulo $16$ with $\xi(5)=i$. Take the primitive characters inducing $(\cdot/q)\xi^j$ for $q\in\{547,727\}$ and $0\le j<4$. Passing from their eight primitive $L$-functions to the characters induced modulo $16\cdot547\cdot727$ multiplies the product by
+\[
+(1-2^{-2s})(1-547^{-4s})(1-727^{-2s})^2.
+\]
+At $2$ the nonzero primitive character values are $1$ and $-1$. At $547$ each fourth root of unity occurs once, and at $727$ each sign occurs twice. Under Dirichlet GRH, two prime-race measurements at widths $p$ and $p^2$ recover the corresponding local polynomial at each prime \parencite{Crossley2026WidthCusp}.
+
 \begin{lemma}[Finite Euler factors are zero-free]\label{lem:euler}
 If $p$ is prime, $\Rea(s)>0$, and $|z|\le1$, then $1-zp^{-s}\ne0$.
 \end{lemma}

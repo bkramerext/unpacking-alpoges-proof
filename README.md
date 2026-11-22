@@ -7,7 +7,7 @@ An accessible, detailed mathematical exposition of Levent Alpöge's announced pr
 
 ## Read and download
 
-- **[Read the manuscript (PDF)](paper/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.pdf)** — 137 pages.
+- **[Read the manuscript (PDF)](paper/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.pdf)** (138 pages).
 - **[LaTeX manuscript (.tex)](source/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.tex)** — editable source.
 - **[LaTeX bibliography](source/SCHOLARLY_BIBLIOGRAPHY.bib)** and **[editable figures](source/figures/)** — individual source files.
 
