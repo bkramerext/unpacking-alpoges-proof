@@ -7,7 +7,7 @@ An accessible, detailed mathematical exposition of Levent Alpöge's announced pr
 
 ## Read and download
 
-- **[Read the manuscript (PDF)](paper/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.pdf)** (138 pages).
+- **[Read the manuscript (PDF)](paper/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.pdf)** (138 pages). Section 1.6 adds a worked example to the [137-page deposited manuscript](https://doi.org/10.5281/zenodo.24433694).
 - **[LaTeX manuscript (.tex)](source/Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.tex)** — editable source.
 - **[LaTeX bibliography](source/SCHOLARLY_BIBLIOGRAPHY.bib)** and **[editable figures](source/figures/)** — individual source files.
 
@@ -27,7 +27,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error \
   Unpacking_Alpoges_Proof_Of_the_Riemann_Hypothesis_v1.1-review.tex
 ```
 
-The manuscript PDF was built from this editable source. All diagrams are editable TikZ.
+The manuscript PDF was built from this editable source. All diagrams are editable TikZ. To build the TeX from the Zenodo deposit, put the five TikZ files from [source/figures](source/figures/) in a `figures/` directory beside the `.tex` file.
 
 ## Sources and mathematical status
 
